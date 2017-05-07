@@ -37,3 +37,15 @@ eval "$(ssh-agent -s)"
 ssh-add -K ~/.ssh/id_rsa
 pbcopy < ~/.ssh/id_rsa.pub
 ```
+
+## Изменение автора коммита (если нечего терять :) )
+```
+git log --graph
+git rebase -i <hash>  # от предыдущего
+git log
+git commit --amend --author = "Etsu"
+git rebase --continue <<email>>
+git log --graph
+git push --force
+git log --graph
+```
