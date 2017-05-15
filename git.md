@@ -49,3 +49,8 @@ git log --graph
 git push --force
 git log --graph
 ```
+
+## For VIM!
+```
+sudo update-alternatives --config editor
+```
