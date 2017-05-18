@@ -37,3 +37,7 @@
 ```
 scp -r root@localhost:/home/user/tmp/dir .
 ```
+
+```
+dpkg-query -L
+```
