@@ -5,14 +5,32 @@
                                     /\__|    |/ __ \\   /  / __ \_
                                     \________(____  /\_/  (____  /
                                                   \/           \/ 
-  ```
+  ``` 
+  
 # Java
+
+## Install Java
+```
+sudo add-apt-repository ppa:webupd8team/java
+aptitude update
+aptitude search oracle
+aptitude install oracle-java8-installer oracle-java7-installer
+```
+
+## Compilation
 ```
 javac HelloWorld.java
 javap -v HelloWorld.class 
 java HelloWorld
 java -classpath classes_dir HelloWorld
 ```
+
+## Компиляция со сторонними классами (библиотеками)
+```
+java -classpath lib.jar HelloWorld.java
+java -classpath lib.jar:hw.jar HelloWorld
+```
+
 ## JAR
 ### Упаковка
 ```
@@ -39,12 +57,6 @@ java -jar hw.jar
 java -classpath hw.jar HelloWorld
 ```
 
-# Компиляция
-## Компиляция со сторонними классами (библиотеками)
-```
-java -classpath lib.jar HelloWorld.java
-java -classpath lib.jar:hw.jar HelloWorld
-```
 # Codestyle
 Более подробно о рекомендуемом стиле кода можно почитать здесь:
 * Старый документ [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html)
