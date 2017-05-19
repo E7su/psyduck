@@ -19,6 +19,7 @@ cd kafka_2.11-0.9.0.0
 
 ## Start a ZooKeeper server 
 // Kafka has a single node Zookeeper configuration built-in
+
 // To stop Zookeeper, you will need to bring it back to the foreground and use control-C or you will need to find the process and kill it
 ```
 bin/zookeeper-server-start.sh config/zookeeper.properties &
