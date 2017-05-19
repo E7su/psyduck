@@ -6,6 +6,9 @@ sudo aptitude update
 less /var/log/hadoop-hdfs/hadoop-hdfs-namenode-skylake.log
 mkdir -p $HADOOP_HOME/dfs/name
 mkdir -p $HADOOP_HOME/dfs/name/data
-
 vim /etc/hadoop/conf/hdfs-site.xml
+
+/etc/init.d/hadoop-yarn-resourcemanager start
+less /var/log/hadoop-yarn/yarn-yarn-resourcemanager-skylake.log 
+vim /etc/hadoop/conf/yarn-site.xml 
 ```
