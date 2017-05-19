@@ -29,7 +29,8 @@ bin/zookeeper-server-start.sh config/zookeeper.properties &
 ```
 bin/kafka-topics.sh --create --zookeeper localhost:2181 \
        --replication-factor 1 --partitions 1 --topic fast-messages
-$ bin/kafka-topics.sh --create --zookeeper localhost:2181 \ 
+       
+bin/kafka-topics.sh --create --zookeeper localhost:2181 \ 
        --replication-factor 1 --partitions 1 --topic summary-markers
 ```
 
@@ -63,5 +64,6 @@ target/kafka-example producer
 ## Create producer from file and test it in consumer
 ```
 cat /tmp/2 | kafkacat -P -b localhost:9092 -t test_test
+
 ./bin/kafka-console-consumer.sh  --zookeeper localhost:2181 --topic test_test
 ```
