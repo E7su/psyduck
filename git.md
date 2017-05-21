@@ -26,6 +26,23 @@
 '------------------------------------------------------------------------------'
 ```
 
+## Config
+```
+[user]
+        name = Etsu
+        email = etsu4296@gmail.com
+
+[alias]
+        home = !git config --global user.email etsu4296@gmail.com && git config --global user.name \"Etsu\"
+        ivi = !git config --global user.email pazarova@ivi.ru && git config --global user.name \"pazarova\"
+        alfa = !git config --global user.email pazarova@alfabank.ru && git config --global user.name \"pazarova\"
+
+        homerepo = !git config --local user.email etsu4296@gmail.com && git config --local user.name \"Etsu\"
+        ivirepo = !git config --local user.email pazarova@ivi.ru && git config --local user.name \"pazarova\"
+        alfarepo = !git config --local user.email pazarova@alfabank.ru && git config --local user.name \"pazarova\"
+```
+
+
 ## Настройка автора коммитов в git и добавление ключа
 ```
 git config --global user.name "<name>"
