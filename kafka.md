@@ -25,6 +25,11 @@ cd kafka_2.11-0.9.0.0
 bin/zookeeper-server-start.sh config/zookeeper.properties &
 ```
 
+## Run kafka
+```
+bin/kafka-server-start.sh config/server.properties
+```
+
 ## Create the topics for the example programs
 ```
 bin/kafka-topics.sh --create --zookeeper localhost:2181 \
