@@ -69,3 +69,10 @@ mvn package
 
 /home/temp/flink-1.2.0/bin/flink run --class Test2 --jobmanager yarn-cluster -yn 2 ./target/test-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
+
+## Create and start my package on Yarn cluster with Graphite
+```
+export HADOOP_CONF_DIR=/etc/hadoop/conf
+
+mvn package && /home/temp/flink-1.2.0/bin/flink run --class TestRecordsCounter --classpath file:///home/temp/flink-1.2.0/lib/ --jobmanager yarn-cluster -yn 2 ./target/test-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
