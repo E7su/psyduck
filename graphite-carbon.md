@@ -2,6 +2,7 @@
 aptitude install graphite-web graphite-carbon 
 /etc/init.d/carbon-cache status
 netstat -tlnp | grep 2003
+tcpdump -i any port 2003
 ```
 
 
