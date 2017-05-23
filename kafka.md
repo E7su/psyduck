@@ -72,3 +72,8 @@ cat /tmp/2 | kafkacat -P -b localhost:9092 -t test_test
 
 ./bin/kafka-console-consumer.sh  --zookeeper localhost:2181 --topic test_test
 ```
+
+## Test
+```
+./bin/kafka-console-producer.sh  --broker-list 127.0.0.1:9092 --topic fast-messages
+```
