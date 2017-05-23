@@ -34,3 +34,7 @@ vim /etc/hadoop/conf/hdfs-site.xml
 less /var/log/hadoop-yarn/yarn-yarn-resourcemanager-skylake.log 
 vim /etc/hadoop/conf/yarn-site.xml 
 ```
+
+```
+export HADOOP_CONF_DIR=/etc/hadoop/conf
+```
