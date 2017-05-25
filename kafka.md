@@ -73,6 +73,11 @@ cat /tmp/2 | kafkacat -P -b localhost:9092 -t test_test
 ./bin/kafka-console-consumer.sh  --zookeeper localhost:2181 --topic test_test
 ```
 
+## Create producer from shell
+```
+for x in {1..10000} ; do bash -c "echo $x && sleep 1" ; done | kafkacat -P -b localhost:9092 -t test_producer
+```
+
 ## Test
 ```
 ./bin/kafka-console-producer.sh  --broker-list 127.0.0.1:9092 --topic fast-messages
