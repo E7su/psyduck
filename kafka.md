@@ -77,3 +77,10 @@ cat /tmp/2 | kafkacat -P -b localhost:9092 -t test_test
 ```
 ./bin/kafka-console-producer.sh  --broker-list 127.0.0.1:9092 --topic fast-messages
 ```
+
+
+## Get a Zookeeper shell and list path where Kafka stores consumer's offsets (groupId)
+```
+./bin/zookeeper-shell.sh localhost:2181 
+ls /consumers
+```
