@@ -53,6 +53,7 @@ mvn clean package
 
 ## Start the example consumer
 ```
+cd kafka-sample-programs/
 target/kafka-example consumer
 ```
 
