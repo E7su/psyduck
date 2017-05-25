@@ -89,3 +89,8 @@ for x in {1..10000} ; do bash -c "echo $x && sleep 1" ; done | kafkacat -P -b lo
 ./bin/zookeeper-shell.sh localhost:2181 
 ls /consumers
 ```
+
+## GroupId finder in shell :D
+```
+./bin/zookeeper-shell.sh localhost:2181 ls /consumers | tr ', ' ' \n' | tr '[' '\n' | tr ']' ' ' > tmp
+```
