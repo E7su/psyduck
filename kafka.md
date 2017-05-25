@@ -51,15 +51,14 @@ cd kafka-sample-programs/
 mvn clean package
 ```
 
-## Start the example consumer
-```
-cd kafka-sample-programs/
-target/kafka-example consumer
-```
-
 ## Run the example producer
 ```
-target/kafka-example producer
+kafka-sample-programs/target/kafka-example producer
+```
+
+## Start the example consumer
+```
+kafka-sample-programs/target/kafka-example consumer
 ```
 
 ## Read consumer's messages
