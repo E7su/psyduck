@@ -71,3 +71,8 @@ git log --graph
 ```
 sudo update-alternatives --config editor
 ```
+
+## Удаление ветки testing
+```
+git branch -d testing
+```
