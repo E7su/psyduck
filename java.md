@@ -67,6 +67,10 @@ java -classpath hw.jar HelloWorld
 #### Gradle - build.gradle
 #### Maven - pom.xml
 
+# Print type
+```
+System.out.println(variable.getClass().getName());
+```
 
 # Классы-обёртки (wrapper classes)
 ```
