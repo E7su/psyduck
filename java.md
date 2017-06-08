@@ -47,12 +47,12 @@ jar tf hw.jar
 jar xf hw.jar
 ```
 
-# Запуск
-## Запуск программы, если прописан главный класс
+## Запуск
+### Запуск программы, если прописан главный класс
 ```
 java -jar hw.jar
 ```
-## Else:
+### Else:
 ```
 java -classpath hw.jar HelloWorld
 ```
