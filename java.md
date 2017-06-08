@@ -57,22 +57,22 @@ java -jar hw.jar
 java -classpath hw.jar HelloWorld
 ```
 
-# Codestyle
+## Codestyle
 Более подробно о рекомендуемом стиле кода можно почитать здесь:
 * Старый документ [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html)
 * Черновик нового документа [Java Style Guidelines](http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html)
 
-# Assembly:
+## Assembly:
 #### Ant - build.xml
 #### Gradle - build.gradle
 #### Maven - pom.xml
 
-# Print type
+## Print type
 ```
 System.out.println(variable.getClass().getName());
 ```
 
-# Классы-обёртки (wrapper classes)
+## Классы-обёртки (wrapper classes)
 ```
 int primitive = 0
 // boxing
@@ -81,7 +81,7 @@ Integer reference = Integer.valueOf(primitive);
 int backToPrimitive = reference.intValue();
 ```
 
-# Конвертация в строку и обратно
+## Конвертация в строку и обратно
 ```
 long fromString = Long parseLong("12345");
 String fromLong = Long.toString(12345);
