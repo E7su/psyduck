@@ -61,6 +61,7 @@ java -classpath hw.jar HelloWorld
 Более подробно о рекомендуемом стиле кода можно почитать здесь:
 * Старый документ [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html)
 * Черновик нового документа [Java Style Guidelines](http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html)
+* Статья на русском [Рекомендации к стилю кода](https://habrahabr.ru/post/112042/)
 
 ## Assembly:
 #### Ant - build.xml
