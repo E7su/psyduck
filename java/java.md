@@ -89,3 +89,9 @@ String concatenation = "area" + 51;
 ```
 
 ![](https://ucarecdn.com/89855d97-d6ad-4a79-bffa-7786d8eae311/)
+
+## Simple way to print a Java array
+```
+String[] array = new String[] {"John", "Mary", "Bob"};
+System.out.println(Arrays.toString(array));
+```
