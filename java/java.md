@@ -124,7 +124,7 @@ System.out.println(Arrays.toString(a));
 System.out.println(Arrays.deepToString(a));
 ```
 
-## Strings
+# Strings
 ```
 char[] charArray = {'a', 'b', 'c'};
 String string = new String(charArray);
@@ -133,9 +133,11 @@ char[] charFromString = string.toCharArray();
 String s = "stringIsImmutable";
 int length = s.length();
 char firstChar = s.charAt(0);
+
 boolean endsWithTable = s.endsWith("table");
 booalen containsIs = s.contains("Is");
 String substr = s.substring(0, 6);
+
 String afterReplace = s.replace("Imm", "M");
 String allCapitals = s.toUpperCase();
 boolean equal2 = s1.equalsIgnoreCase(s2);
