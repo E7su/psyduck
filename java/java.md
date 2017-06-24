@@ -96,3 +96,30 @@ String concatenation = "area" + 51;
 String[] array = new String[] {"John", "Mary", "Bob"};
 System.out.println(Arrays.toString(array));
 ```
+
+# Arrays
+## Varargs
+```
+static int maxArray(int[] numbers) { ... };
+maxArray(new int[] {1, 2, 3});
+
+static int maxVarargs(int... numbers) { ... };
+maxVarargs(1, 2, 3);
+```
+
+## Array equals
+```
+import java.util.Arrays;
+
+int[] a = {1, 2, 3};
+int[] b = {4, 5, 6};
+boolean equals = Arrays.equals(a, b);
+boolean equals = Arrays.deepEquals(a, b);
+```
+
+## Print Array
+```
+int[] a = {1, 2, 3};
+System.out.println(Arrays.toString(a));
+System.out.println(Arrays.deepToString(a));
+```
