@@ -142,3 +142,35 @@ String afterReplace = s.replace("Imm", "M");
 String allCapitals = s.toUpperCase();
 boolean equal2 = s1.equalsIgnoreCase(s2);
 ```
+
+# Ternary operator
+```
+if (weatherIsGood) {
+    System.out.println("Wheater is good");
+} else {
+    System.out.println("Wheater is bad");
+}
+
+// same effect, but much shorter
+System.out.println("Wheater is "
+        + (wheaterIsGood ? "good" : "bad"));
+```
+
+# Switch
+```
+switch (digit) {
+    case 0: 
+        text = "zero";
+        break;
+        
+    case 1:
+        text = "one";
+        break;
+        
+    // ...
+    
+    default:
+        text = "???";
+        
+}
+```
