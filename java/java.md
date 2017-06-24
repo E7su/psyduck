@@ -174,3 +174,18 @@ switch (digit) {
         
 }
 ```
+
+# Circles
+## Do while
+```
+do {
+    goShopping();
+} while (haveTime() && haveMoney());
+```
+
+## Foreach
+```
+for (String arg : args) {
+    System.out.printls(arg);
+}
+```
