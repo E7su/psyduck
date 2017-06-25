@@ -189,3 +189,35 @@ for (String arg : args) {
     System.out.printls(arg);
 }
 ```
+
+# OOP
+## Constructors
+```
+package java.lang;
+
+public final class Integer {
+    
+    private final int value;
+    
+    public Integer(int value){
+        this.value = value;
+    }
+    
+    // ...
+}
+```
+```
+package java.math;
+
+public class BigInteger {
+    
+    public BigInteger(String val){
+        this.(val, 10);  // defaul value
+    }
+    
+    public BigInteger(String val, int radix){
+        // ...
+    }
+
+}
+```
