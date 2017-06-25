@@ -243,7 +243,7 @@ for (DayOfWeek day : DayOfWeek.values()) {
 }
 ```
 
-# Inheritance & Override
+## Inheritance & Override
 ```
 package java.lang;
 
@@ -259,3 +259,51 @@ public final class StringBuilder
     // AbstractStringBuilder append(String str)
 }
 ```
+
+## Super
+```
+package java.lang;
+
+public final class StringBuilder
+    extends AbstractStringBuilder {
+    
+    public StringBuilder() {
+        super(16);
+    }
+    
+    @Override
+    public StringBuilder append(String str) {
+        super.append(str);
+        return this;
+    }
+    
+    // ...
+}
+```
+
+## Extends Object
+- equals()
+- toString()
+- hashCode()
+
+## Override equals()
+```
+package java.lang;
+
+public final class String /*extends Object*/ {
+
+    @Override
+    public boolean equals(Object anObject) {
+        if (this == anObject) {
+            return true;
+        }
+        if (anObject instanceof String) {
+            String other = (String)anObject;
+            // ...
+        }
+        return false;
+    }
+    // ...
+}
+```
+
