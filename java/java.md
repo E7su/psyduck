@@ -10,7 +10,7 @@
 # Java
 
 ## Install Java
-```
+```bash
 sudo add-apt-repository ppa:webupd8team/java
 aptitude update
 aptitude search oracle
@@ -18,7 +18,7 @@ aptitude install oracle-java8-installer oracle-java7-installer
 ```
 
 ## Compilation
-```
+```bash
 javac HelloWorld.java
 javap -v HelloWorld.class 
 java HelloWorld
@@ -26,34 +26,34 @@ java -classpath classes_dir HelloWorld
 ```
 
 ## Компиляция со сторонними классами (библиотеками)
-```
+```bash
 java -classpath lib.jar HelloWorld.java
 java -classpath lib.jar:hw.jar HelloWorld
 ```
 
 ## JAR
 ### Упаковка
-```
+```bash
 jar cfe hw.jar HelloWorld HelloWorld.class
 ```
 
 ### Просмотреть содержимое архива без распаковки
-```
+```bash
 jar tf hw.jar
 ```
 
 ### Распаковка архива
-```
+```bash
 jar xf hw.jar
 ```
 
 ## Запуск
 ### Запуск программы, если прописан главный класс
-```
+```bash
 java -jar hw.jar
 ```
 ### Else:
-```
+```bash
 java -classpath hw.jar HelloWorld
 ```
 
@@ -69,12 +69,12 @@ java -classpath hw.jar HelloWorld
 #### Maven - pom.xml
 
 ## Print type
-```
+```java
 System.out.println(variable.getClass().getName());
 ```
 
 ## Классы-обёртки (wrapper classes)
-```
+```java
 int primitive = 0
 // boxing
 Integer reference = Integer.valueOf(primitive);
@@ -83,7 +83,7 @@ int backToPrimitive = reference.intValue();
 ```
 
 ## Конвертация в строку и обратно
-```
+```java
 long fromString = Long parseLong("12345");
 String fromLong = Long.toString(12345);
 String concatenation = "area" + 51;
@@ -92,14 +92,14 @@ String concatenation = "area" + 51;
 ![](https://ucarecdn.com/89855d97-d6ad-4a79-bffa-7786d8eae311/)
 
 ## Simple way to print a Java array
-```
+```java
 String[] array = new String[] {"John", "Mary", "Bob"};
 System.out.println(Arrays.toString(array));
 ```
 
 # Arrays
 ## Varargs
-```
+```java
 static int maxArray(int[] numbers) { ... };
 maxArray(new int[] {1, 2, 3});
 
@@ -108,7 +108,7 @@ maxVarargs(1, 2, 3);
 ```
 
 ## Array equals
-```
+```java
 import java.util.Arrays;
 
 int[] a = {1, 2, 3};
@@ -118,14 +118,14 @@ boolean equals = Arrays.deepEquals(a, b);
 ```
 
 ## Print Array
-```
+```java
 int[] a = {1, 2, 3};
 System.out.println(Arrays.toString(a));
 System.out.println(Arrays.deepToString(a));
 ```
 
 # Strings
-```
+```java
 char[] charArray = {'a', 'b', 'c'};
 String string = new String(charArray);
 char[] charFromString = string.toCharArray();
@@ -144,7 +144,7 @@ boolean equal2 = s1.equalsIgnoreCase(s2);
 ```
 
 # Ternary operator
-```
+```java
 if (weatherIsGood) {
     System.out.println("Wheater is good");
 } else {
@@ -157,7 +157,7 @@ System.out.println("Wheater is "
 ```
 
 # Switch
-```
+```java
 switch (digit) {
     case 0: 
         text = "zero";
@@ -177,14 +177,14 @@ switch (digit) {
 
 # Circles
 ## Do while
-```
+```java
 do {
     goShopping();
 } while (haveTime() && haveMoney());
 ```
 
 ## Foreach
-```
+```java
 for (String arg : args) {
     System.out.printls(arg);
 }
@@ -192,7 +192,7 @@ for (String arg : args) {
 
 # OOP
 ## Constructors
-```
+```java
 package java.lang;
 
 public final class Integer {
@@ -206,7 +206,7 @@ public final class Integer {
     // ...
 }
 ```
-```
+```java
 package java.math;
 
 public class BigInteger {
@@ -223,7 +223,7 @@ public class BigInteger {
 ```
 
 ## Enums
-```
+```java
 package java.time;
 
 public enum DayOfWeek {
@@ -244,7 +244,7 @@ for (DayOfWeek day : DayOfWeek.values()) {
 ```
 
 ## Inheritance & Override
-```
+```java
 package java.lang;
 
 public final class StringBuilder
@@ -261,7 +261,7 @@ public final class StringBuilder
 ```
 
 ## Super
-```
+```java
 package java.lang;
 
 public final class StringBuilder
@@ -287,7 +287,7 @@ public final class StringBuilder
 - hashCode()
 
 ## Override equals()
-```
+```java
 package java.lang;
 
 public final class String /*extends Object*/ {
@@ -307,3 +307,21 @@ public final class String /*extends Object*/ {
 }
 ```
 
+## Interface
+```java
+package org.stepic.java.orders;
+
+import java.time.LocalDate;
+
+public interface OrderService {
+    Order[] getOrdersByClient(long clientId);
+    
+    // Order[] getOrdersByClient(long clientId, LocalDate date);
+    
+    default Order[] getOrdersByClient(
+            long clientId, LocalDate date) {
+        Order[] allOrders = getOrdersByClient(clientId);
+        return Orders.filterByDate(allOrders, date);
+    }
+}
+```
