@@ -221,3 +221,41 @@ public class BigInteger {
 
 }
 ```
+
+## Enums
+```
+package java.time;
+
+public enum DayOfWeek {
+    MONDAY,  // <- public static final
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY;
+    
+    // fields, methods
+}
+
+for (DayOfWeek day : DayOfWeek.values()) {
+    System.out.println(day.ordinal() + " " + day.name());
+}
+```
+
+# Inheritance & Override
+```
+package java.lang;
+
+public final class StringBuilder
+    extends AbstractStringBuilder {
+    
+    @Override
+    public StringBuilder append(String str){
+        // ...
+    }
+    
+    // base method in AbstractStringBuilder:
+    // AbstractStringBuilder append(String str)
+}
+```
