@@ -41,3 +41,115 @@ scp -r root@localhost:/home/user/tmp/dir .
 ```
 dpkg-query -L
 ```
+
+## Delete binding host-key
+```
+rm ~/.ssh/known_hosts
+```
+
+## Unpack tgz
+```
+tar -zxvf archive.tgz
+```
+
+## Print env variables
+```
+printenv <имя_переменной>
+```
+
+## Check if a command succeeded
+```bash
+some_command
+if [ $? -eq 0 ]; then
+    echo OK
+else
+    echo FAIL
+fi
+```
+
+
+
+
+# GNU Screen
+## Свернуть запущенный скрин
+Перевод в командный режим
+```CTRL``` + ```A```
+Сворачивание текущего скрина
+```D```
+
+## Вернуться к свёрнутому скрину
+```
+screen -r
+```
+
+## Бегать по истории
+```CTRL``` + ```A``` 
+```<esc>```
+http://help.ubuntu.ru/wiki/screen
+
+# Crontab
+## Отправка писем на почту об успешности выполнения скрипта
+http://help.ubuntu.ru/wiki/mta
+
+#TR
+```
+tr -d "\n"
+```
+
+
+## Users
+[Add user](http://yapro.ru/web-master/unix/useradd.html)
+
+## Deb
+```
+sudo apt-get install devscripts autoconf automake libtool autotools-dev dpkg-dev fakeroot
+
+```
+
+## restart ClickHouse
+```
+/etc/init.d/clickhouse-server restart
+```
+
+## create simlink
+```
+ln -s /opt/directory /home/symlink-to-opt-dir
+chown -h user:group /home/symlink-to-opt-dir
+```
+
+# Tmux
+```
+Очень хороший способ запустить tmux:
+tmux attach || tmux new — делая так, вы сперва пытаетесь подключиться к уже существующему серверу tmux, если он существует; если такого ещё нет — создаёте новый.
+
+После этого вы попадаете в полноценную консоль.
+Ctrl+b d — отключиться. (Точно так же вы отключитесь, если прервётся соединение. Как подключиться обратно и продолжить работу — см. выше.)
+
+В одной сессии может быть сколько угодно окошек:
+Ctrl+b c — создать окошко;
+Ctrl+b 0...9 — перейти в такое-то окошко;
+Ctrl+b p — перейти в предыдущее окошко;
+Ctrl+b n — перейти в следующее окошко;
+Ctrl+b l — перейти в предыдущее активное окошко (из которого вы переключились в текущее);
+Ctrl+b & — закрыть окошко (а можно просто набрать exit в терминале).
+
+В одном окошке может быть много панелей:
+Ctrl+b % — разделить текущую панель на две, по вертикали;
+Ctrl+b " — разделить текущую панель на две, по горизонтали (это кавычка, которая около Enter, а не Shift+2);
+Ctrl+b →←↑↓ — переходить между панелями;
+Ctrl+b x — закрыть панель (а можно просто набрать exit в терминале).
+
+Недостаток — непривычным становится скроллинг:
+Ctrl+b PgUp — вход в «режим копирования», после чего:
+PgUp, PgDown — скроллинг;
+q — выход из «режима копирования».
+```
+
+## Check md5
+```
+md5sum filename
+```
+
+## Build deb-packages
+[https://habrahabr.ru/post/78094/](Build deb-packages)
+[Dirs](https://www.debian.org/doc/manuals/maint-guide/dother.ru.html)
