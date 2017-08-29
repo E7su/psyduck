@@ -76,3 +76,16 @@ sudo update-alternatives --config editor
 ```
 git branch -d testing
 ```
+
+## Merge
+```
+git checkout master
+git pull
+git checkout <branch>
+git rebase master
+git push origin :<branch> -- удаляет ветку branch в удаленном репозитории 
+git checkout master
+git merge --no-ff <branch>
+git tag <tag>
+git push origin master <tag>
+```
