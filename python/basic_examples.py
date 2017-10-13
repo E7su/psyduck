@@ -30,5 +30,17 @@ print (x[2], x[0], x[1], sep="\n")
 # lucky ticket
 n = list(map(int, list(input())))
 print('Счастливый' if sum(n[:3]) == sum(n[3:]) else 'Обычный')
- 
-			
+
+# ===================================================================
+# russian programmers
+n = int(input())
+temp = 'программист'
+
+if str(n)[-2:-1] == '1':
+    print(n, temp + 'ов')
+elif str(n)[-1] == '1':
+    print(n, temp)
+elif str(n)[-1] in ('2', '3', '4'):
+    print(n, temp + 'а')
+else:
+    print(n, temp + 'ов')
