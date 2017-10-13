@@ -44,3 +44,20 @@ elif str(n)[-1] in ('2', '3', '4'):
     print(n, temp + 'а')
 else:
     print(n, temp + 'ов')
+
+# ===================================================================
+# multiplication table
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+for k in range(c, d + 1):
+    print('', k, end='\t')
+print()
+
+for f in range(a, b + 1):
+    print(f, end='\t')
+    for i in range(c, d + 1):
+        print(i * f, end='\t')
+    print()
