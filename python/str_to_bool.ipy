@@ -1,0 +1,14 @@
+>>> import distutils.util
+>>> some_string='True'
+>>> distutils.util.strtobool(some_string)
+1
+>>> some_string='False'
+>>> distutils.util.strtobool(some_string)
+0
+>>> some_string='dsaf'
+>>> distutils.util.strtobool(some_string)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python2.7/distutils/util.py", line 325, in strtobool
+    raise ValueError, "invalid truth value %r" % (val,)
+ValueError: invalid truth value 'dsaf'
